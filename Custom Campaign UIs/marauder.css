@@ -2,8 +2,8 @@
 :root {
     /*MAIN CUSTOMIZATION*/
     --font-h2: "Romantic"; /*Title font*/
-    --font-body: "Garamond"; /*Main font*/
-    --font-chatheader: "Imbue"; /*Chat header font*/
+    --font-body: "Times New Roman"; /*Main font*/
+    --font-chatheader: "headline"; /*Chat header font*/
     --titlebar: url(\/UI\/TitlebarBG\.png-); /*Uses Data as root folder, use this to give a texture to the title bars*/
     --pattern: url(\/CustomResources\/PatternTiles\.png-); /*This will replace the background of textured stuff*/
     --patternSidebar: url(\/CustomResources\/PatternTiles\.png);
@@ -12,14 +12,14 @@
     --pattern-blend-mode: luminosity; /*I usually go for luminosity, difference or color-dodge, try them and pick your poison*/
     --title-blend-mode: difference; /*This just changes how the texture is mixed with the colors*/
     --sidebar-blend-mode: color-dodge;
-    --active-color: #fffdbf;
-    --active-shadow-color: #1114ad;
-    --hover-color: #257e70;
+    --active-color: #cdbd8a;
+    --active-shadow-color: #000000;
+    --hover-color: #780a0a;
     --header-color: transparent;
     --button-color: #00000075;
     --background-color: #00000077;
-    --settings-color: linear-gradient(to top, #288858bb 0%, #0a5a78bb 100%);
-    --sidebar-color: radial-gradient(circle at top right, #0a5a78bb 0%, transparent 100%);
+    --settings-color: linear-gradient(to top, #cdbd8abb 0%, #780a0abb 100%);
+    --sidebar-color: radial-gradient(circle at top right, #780a0abb 0%, transparent 100%);
     --shadow-color: #000000;
     --window-shadow-color: #000000;
     --title-text-color: white;
@@ -46,8 +46,8 @@
     --title-bg: var(--header-color);
     --background-opacity: 0.9;
     --button-fx: none;
-    --v11-fx: blur(12px);
-    --sidebar-width: 324px;
+    --v11-fx: blur(4px);
+    --sidebar-width: 330px;
     --shadow-size: 4px;
     --font-size-14: 0.875rem;
     --font-size-12: 0.75rem;
@@ -1010,7 +1010,7 @@ time.message-timestamp{
     top: -12px;
     position: relative;
     rotate: -1deg;
-    text-shadow: 12px 8px 0px black;
+    text-shadow: 12px 5px 0px black;
 }
 .window-title {
     text-align-last: left;
@@ -1160,4 +1160,8 @@ h4:hover, h3:hover, h2:hover, h1:hover, p:hover{
         min-width: 100% !important;
         min-height: 100% !important;
     }
+}
+
+section#chat{
+    overflow: revert;
 }
