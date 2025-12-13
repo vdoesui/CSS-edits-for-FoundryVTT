@@ -1108,6 +1108,15 @@ h4:hover, h3:hover, h2:hover, h1:hover, p:hover{
     rotate: 0.5deg;
 }
 
+img:hover{
+    scale: 1.2;
+    rotate: 1deg;
+    transition: 0.15s;
+}
+img{
+    transition: 0.15s;
+}
+
 
 
 /* Improved mobile usability */
@@ -1160,8 +1169,4 @@ h4:hover, h3:hover, h2:hover, h1:hover, p:hover{
         min-width: 100% !important;
         min-height: 100% !important;
     }
-}
-
-section#chat{
-    overflow: revert;
 }
