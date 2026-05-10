@@ -1,6 +1,12 @@
             /***V11 STYLES***/
             :root {
                 --huemod: 0deg;
+                --current-mod: none;
+                --pattern-ott: url(\/CustomResources\/ptott\.png);
+                --pattern-abril: url(\/CustomResources\/ptabril\.png);
+                --pattern-alathor: url(\/CustomResources\/ptalathor\.png);
+                --current-pattern: none;
+                --aux-blur: none;
                 --color-underline-header: transparent;
                 --color-border-highlight-alt: var(--color-light-3);
                 --color-border-highlight: var(--color-light-3);
@@ -73,9 +79,33 @@
                 --color-border-light-tertiary: var(--color-light-3);
                 --color-border-dark-4: transparent;
             }
+
+            /**SFX**/
             #ui-right, #ui-left, #ui-middle {
-                filter: none;
+                transition: 0.3s;
+                filter: hue-rotate(var(--current-mod));
             }
+
+            #ui-right{
+                backdrop-filter: blur(var(--aux-blur));
+            }
+
+            #sidebar::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: var(--current-pattern);
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                background-size: auto 90vh;
+                opacity: 0.5;
+                mix-blend-mode: overlay;
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            /**css**/
+
             a.header-button:hover,
             #sidebar-tabs>.item:hover,
             #controls>ol.main-controls>li.scene-control:hover,
@@ -945,6 +975,11 @@
             #inline-viewer-settings .settingsContainer #newEntry, #inline-viewer-settings .buttonContainer,
             .worldbuilding .attributes-header {
                 background: none;
+            }
+
+            /*Minimize currently playing*/
+            .playlists-sidebar #currently-playing.location-bottom ol.playlist-sounds{
+                display: none !important;
             }
 
             /*No loading bar*/
