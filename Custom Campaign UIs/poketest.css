@@ -1,12 +1,12 @@
 /***V11 STYLES***/
 :root {
-    --font-h2: "Trebuchet", serif;
-    --font-body: "DOS", "Trebuchet" !important;
+    --font-h2: "mine", serif;
+    --font-body: "mine" !important;
 	--font-primary: var(--font-body);
-	--cp-playerui-color: #fb952b;
+	--cp-playerui-color: #E14E35;
     --cp-transparent-playerui: color-mix(in srgb, var(--cp-playerui-color) 50%, #00000099);
     --cp-boxshadow: 4px 4px 11px var(--cp-transparent-playerui);
-    --cp-font-light: #ffc949;
+    --cp-font-light: #fff;
     --cp-textshadow: 2px 2px 4px color-mix(in srgb, var(--cp-font-light) 50%, #00000099);
     --cp-font-dark: black;
     --cp-cutradius: 8px;
@@ -15,17 +15,17 @@
     --color-warm-3: #5d142b;
     --color-cool-3: #584a75;
     --color-cool-4: var(--color-cool-5-25);
-    --color-cool-5: #0b0a13;
+    --color-cool-5: rgb(29, 38, 41);
     --color-light-1: var(--cp-font-light);
     --color-light-2: var(--cp-font-light);
     --color-light-3: var(--cp-font-light);
     --color-light-4: var(--cp-font-light);
     --color-light-5: var(--cp-font-light);
     --color-light-6: var(--cp-font-light);
-    --color-cool-5-25: rgba(11, 10, 19, 0.25);
-    --color-cool-5-50: rgba(11, 10, 19, 0.5);
-    --color-cool-5-75: rgba(11, 10, 19, 0.75);
-    --color-cool-5-90: rgba(11, 10, 19, 0.8);
+    --color-cool-5-25: rgba(29, 38, 41, 0.25);
+    --color-cool-5-50: rgba(29, 38, 41, 0.5);
+    --color-cool-5-75: rgba(29, 38, 41, 0.75);
+    --color-cool-5-90: rgba(29, 38, 41, 0.8);
     --v11-fx: blur(4px);
     --spacing: 8px;
     --shadow-color: #FFFF0055;
@@ -34,7 +34,7 @@
     --border-r: 0px;
     --title-font: var(--font-h2);
     --title-letter-spacing: 0.02rem;
-    --title-bg: var(--cp-playerui-color);
+    --title-bg: linear-gradient(#e66465, #9198e5);
     --font-size-14: 14px;
     --font-size-12: 12px;
     --font-size-16: 16px;
@@ -50,6 +50,8 @@
     --cursorg-url: url('\/Custom\/CursorA\.png');
     cursor: var(--cursor-url), auto !important;
     scrollbar-color: var(--cp-playerui-color) var(--color-cool-4);
+    --color-shadow-primary: var(--cp-playerui-color);
+    --color-shadow-highlight: var(--cp-playerui-color) !important;
 }
 
 button,
@@ -68,7 +70,7 @@ hr,
 }
 
 form .form-group .form-fields button{
-    color: var(--cp-font-dark);
+    color: var(--cp-font-dark) !important;
 }
 
 .filepicker .current-dir button{
@@ -271,7 +273,7 @@ a.item.category-tab.category-all {
     border: 1px solid var(--cp-playerui-color);
     border-radius: 0;
     box-shadow: var(--cp-boxshadow);
-    background: var(--cp-playerui-color);
+    background: var(--title-bg);
     border-top-left-radius: var(--cp-cutradius);
 }
 
@@ -410,8 +412,9 @@ label {
     letter-spacing: var(--title-letter-spacing);
 }
 .window-app .window-header {
-    height: var(--headerheight);
-    background: var(--cp-playerui-color);
+    height: auto;
+    min-height: var(--headerheight);
+    background: var(--title-bg);
     flex: initial;
     align-content: center;
     font-size: var(--font-size-18);
